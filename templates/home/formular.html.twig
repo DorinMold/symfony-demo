@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{# {{ form(formular) }} - Asta merge si pe cont propriu dar daca vrem ceva in interior
+                          atunci trebuie detaliat mai jos#}
+<div class="container-fluid">
+    <div class="px-md-5 py-5">
+    
+        <h1> User Form: </h1>
+        {{ form_start(formular) }}
+
+            {{ form_label(formular.numeintreg) }}  {# fara label, pentru ca se specifica clar doar widget #}
+
+            {{ form_widget(formular.numeintreg) }}  {# fara label, pentru ca se specifica clar doar widget #}
+
+        {{ form_end(formular) }}
+
+    </div>
+</div>
+{% endblock %}

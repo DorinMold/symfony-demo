@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show post {{ post.title }} {% endblock %}
+
+{% block body %}
+    <h1 class="text-center"> {{ post.title }} </h1>
+
+    <strong>  Post title: </strong> {{ post.title }}
+    <strong>  Post description: </strong> {{ post.description }}
+    <strong>  Post category: </strong> {{ post.category.slug }} {# post.category este un obiect #}
+{% endblock %}

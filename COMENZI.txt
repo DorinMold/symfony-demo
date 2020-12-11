@@ -1,0 +1,35 @@
+composer require asset - pt a putea folosi asset()
+composer require webpack-encore    si    npm install
+composer require form
+
+php bin/console make:entity --regenerate   //cand se modifica una sau mai multe entitati existente si trebuie actualizate
+
+@ORM\OneToMany(targetEntity="App\Entity\Category", mappedBy="post")
+
+@ORM\ManyToOne(targetEntity="App\Entity\Post", inversedBy="category")
+
+---------------------------------------------------------------------------
+
+php bin/console doctrine:schema:update --force  //cand se face actualizarea tabelelor din baza de date
+
+---------------------------------------------------------------------------
+
+php bin/console make:crud
+
+----------------------------------------------------------
+
+php bin/console make:form SubscriberForm Subscriber    //primul este formuarul apoi entity
+
+--------------------------------------------------------------------------------
+use twig\Environment
+public function show(Environment $twig, Request $request, EntityManagerInterface $entityManager)
+
+--------------------------------------------------------------------------------
+
+$builder->add('agreeTerms', CheckboxType::class,['mapped' => false, 'required' => false])  //in setari
+
+$agreeTerm = $form->get('agreeTerms')->getData();
+
+---------------------------------------------------------------------------------------------------
+
+$this->redirect($this->generateUrl('pacpac', ['param1' => 'val1']))

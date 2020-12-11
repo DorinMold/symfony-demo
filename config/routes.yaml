@@ -1,0 +1,10 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+hello_user:
+   path: home/helloUser/{name?}
+   controller: App\Controller\HomeController::helloUser
+   methods: GET
+
